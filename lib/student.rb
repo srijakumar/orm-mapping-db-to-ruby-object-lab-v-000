@@ -14,7 +14,7 @@ class Student
   def self.all
     # retrieve all the rows from the "Students" database
     # remember each row should be a new instance of the Student class
-    sql = <<- SQL
+    sql = <<-SQL
       select *
       FROM students
     SQL
@@ -66,6 +66,12 @@ class Student
 
   def count_all_students_in_grade_9
 
+    sql= <<-SQL
+
+    select * FROM students
+    WHERE grade == "9"
+
+    SQL
 
   end
 
